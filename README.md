@@ -160,7 +160,7 @@ For the ESP-IDF version of T-Display-S3 examples, see [LilyGo-Display-IDF](https
 
 > [!IMPORTANT]
 >
-> **Note:** GPIO15 is the peripheral power control pin. You must set it HIGH before using the board, otherwise the LCD and other peripherals will not work. For battery-powered usage:
+> **Note:** GPIO15 is the peripheral power control pin. You must set it HIGH before using the board, otherwise the LCD and other peripherals will not work. For battery-powered or 5V Pin Header usage:
 > ```c
 > pinMode(15, OUTPUT);
 > digitalWrite(15, HIGH);
@@ -189,7 +189,7 @@ For the ESP-IDF version of T-Display-S3 examples, see [LilyGo-Display-IDF](https
 ## 9. FAQ
 
 1. **The screen does not light up when using battery.**
-   - When T-Display-S3 is powered by battery, GPIO15 must be set to HIGH to turn on the backlight.
+   - When T-Display-S3 is powered by battery or 5V Pin Header, GPIO15 must be set to HIGH to turn on the backlight.
    - Add the following at the beginning of `setup()`:
      ```cpp
      void setup() {

@@ -160,7 +160,7 @@ T-Display-S3 的 ESP-IDF 版本示例，请前往 [LilyGo-Display-IDF](https://g
 
 > [!IMPORTANT]
 >
-> **注意：** GPIO15 是外设电源控制引脚，使用前必须将其设置为高电平，否则 LCD 和其他外设将无法工作。电池供电时请在 `setup()` 中添加：
+> **注意：** GPIO15 是外设电源控制引脚，使用前必须将其设置为高电平，否则 LCD 和其他外设将无法工作。使用电池或 5V 排针供电时，请在 `setup()` 中添加：
 > ```c
 > pinMode(15, OUTPUT);
 > digitalWrite(15, HIGH);
@@ -188,7 +188,7 @@ T-Display-S3 的 ESP-IDF 版本示例，请前往 [LilyGo-Display-IDF](https://g
 ## 9. 常见问题
 
 1. **使用电池供电时屏幕不亮。**
-   - 电池供电时，GPIO15 必须设置为高电平才能打开背光。
+   - 使用电池或 5V 排针为 T-Display-S3 供电时，GPIO15 必须设置为高电平才能打开背光。
    - 请在 `setup()` 开头添加以下代码：
      ```cpp
      void setup() {
